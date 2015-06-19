@@ -2,6 +2,7 @@ $(document).ready( function() {
 	// touch o'logic that counts the kids 
 	// and positions and displays only necessary elements
 	var result_count = $('.result').length;
+	var movies = $("#movies");
 	if (result_count <= 5) {
 		console.log('only 5');
 		var result_count = $('.result').length;
@@ -29,34 +30,79 @@ $(document).ready( function() {
 		move_left = 175;
 		move_right = -475;
 	}
-	
-	
-	// positions left and right hover boxes
-	$("#leftBox").mouseover( function() {
-		var movies = $("#movies");
-		var movies_position = movies.position();
-		
-		if (movies_position.left < 40) {
-			$("#movies").animate({ 
-				left: move_left + "px"
-			}, 1000
-			);
-		}
-		
-	});
-	
-	$("#rightBox").mouseover( function() {
-		var movies = $("#movies");
-		var movies_position = movies.position();
 
-		if (movies_position.left > 0) {
-			$("#movies").animate({ 
-				left: move_right + "px"
-			}, 1000
-			);
-		}
+	function loopRight(){
+	    movies.stop().animate({left:'+=50'}, 300, 'linear', loopRight);
+	}      
+
+	function loopLeft(){
+	    movies.stop().animate({left:'-=50'}, 300, 'linear', loopLeft);
+	}   	  
+
+	function stop(){
+	    movies.stop();
+	}	
+	
+	
+	// // positions left and right hover boxes
+	// $("#leftBox").hover( function() {
+	// 	var movies_position = movies.position();
+	// 	loopRight();		
 		
-	});
+	// }, function(){
+	// 	stop();
+	// });
+	
+	// $("#rightBox").hover( function() {
+	// 	var movies_position = movies.position();
+	// 	loopLeft();
+		
+	// }, function(){
+	// 	stop();
+	// });
+
+
+
+$(".scroll").hover(function () {
+   loop();
+},function () {
+   stop();
+});
+
+
+
+    var iframe = $('#player1')[0];
+    var player = $f(iframe);
+    var status = $('.status');
+
+    // When the player is ready, add listeners for pause, finish, and playProgress
+    player.addEvent('ready', function() {
+        status.text('ready');
+        
+        player.addEvent('pause', onPause);
+        player.addEvent('finish', onFinish);
+        player.addEvent('playProgress', onPlayProgress);
+    });
+
+
+
+    // Call the API when a button is pressed
+    $('#video-cover').on('click', function() {
+    	$(this).fadeOut();
+        player.api('play');
+    });
+
+    function onPause(id) {
+        status.text('paused');
+    }
+
+    function onFinish(id) {
+        status.text('finished');
+    }
+
+    function onPlayProgress(data, id) {
+        status.text(data.seconds + 's played');
+    }	
 	
 });
 

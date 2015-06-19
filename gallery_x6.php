@@ -3,9 +3,10 @@
 <head>
 	<title>Media Loft Video Player</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=9">
-	<LINK REL="icon" type="image/png" href="http://demos.medialoft.com/favicon.ico">
+	<LINK REL="icon" type="image/png" href="assets/images/favicon.png">
 	<title>Media Loft Video Player</title>
-	<script src="assets/js/jquery-2.1.4.min.js"></script>	
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/froogaloop.js"></script>	
 	<script src="assets/js/global.js"></script>
 	<link rel="stylesheet" media="all" href="assets/css/global.css" />
 	<?php 		
@@ -51,17 +52,18 @@
 </head>
 	<body>	
 		<div id="container">
-			<div id="leftBox">
+			<img class="logo" src="assets/images/ML_Logo_video-page.jpg" />
+<!-- 			<div id="leftBox">
 			
 			</div>
 			<div id="rightBox">
 			
-			</div>		
+			</div>	 -->	
 			<div id="content">
-			<img class="logo" src="assets/images/ML_Logo_video-page.jpg" />
 				<div class="wrap">
 					<div id="feature">
-						<iframe src="http://player.vimeo.com/video/<?php echo $video[$vID]; ?>?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=EA321D&amp;autoplay=false" width="645" height="362" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<div id="video-cover"><img src="assets/images/Play_Button.png" alt=""></div>
+						<iframe id="player1" src="http://player.vimeo.com/video/<?php echo $video[$vID]; ?>?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=EA321D&amp;autoplay=false&amp;player_id=player1" width="645" height="362" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					</div>
 		
 					<div id="info">

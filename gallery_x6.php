@@ -5,12 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9">
 	<LINK REL="icon" type="image/png" href="http://demos.medialoft.com/favicon.ico">
 	<title>Media Loft Video Player</title>
-	<script type="text/javascript" language="javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js"></script>	
-	<!--[if lt IE 7]>
-		<script type="text/javascript" language="javascript" src="assets/js/dd_belatedpng.js"></script>
-		<script type="text/javascript" language="javascript" src="assets/js/png_fixes.js"></script>
-	<![endif]-->
-	<script type="text/javascript" language="javascript" src="assets/js/global.js"></script>
+	<script src="assets/js/jquery-2.1.4.min.js"></script>	
+	<script src="assets/js/global.js"></script>
 	<link rel="stylesheet" media="all" href="assets/css/global.css" />
 	<?php 		
 		if(isSet($_GET['video'])){ $vID = $_GET['video']; }else{ $vID = 1; }
@@ -65,7 +61,7 @@
 			<img class="logo" src="assets/images/ML_Logo_video-page.jpg" />
 				<div class="wrap">
 					<div id="feature">
-						<iframe src="http://player.vimeo.com/video/<?php echo $video[$vID]; ?>?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=f99d23&amp;autoplay=true" width="645" height="362" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<iframe src="http://player.vimeo.com/video/<?php echo $video[$vID]; ?>?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=EA321D&amp;autoplay=false" width="645" height="362" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					</div>
 		
 					<div id="info">

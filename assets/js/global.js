@@ -1,18 +1,9 @@
 $(document).ready( function() {
-	// set defaults
-	$(".result div").hide();
-	$(".result").hover( function() {
-			$(this).children().show();
-		},
-		function() {
-			$(this).children("div").hide();
-		}
-	);
-	
 	// touch o'logic that counts the kids 
 	// and positions and displays only necessary elements
 	var result_count = $('.result').length;
 	if (result_count <= 5) {
+		console.log('only 5');
 		var result_count = $('.result').length;
 		var result_width = result_count * $('.result').outerWidth();
 		
@@ -29,8 +20,8 @@ $(document).ready( function() {
 	}
 	
 	if(result_count == 6){
-		move_left = 187;
-		move_right = -150;
+		move_left = 200;
+		move_right = -143;
 	}else if(result_count == 7){
 		move_left = 175;
 		move_right = -320;

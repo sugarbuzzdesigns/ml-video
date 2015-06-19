@@ -63,11 +63,11 @@ $(document).ready( function() {
 
 
 
-$(".scroll").hover(function () {
-   loop();
-},function () {
-   stop();
-});
+	$(".scroll").hover(function () {
+	   loop();
+	},function () {
+	   stop();
+	});
 
 
 

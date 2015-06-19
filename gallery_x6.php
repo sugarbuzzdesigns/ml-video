@@ -12,37 +12,37 @@
 	<?php 		
 		if(isSet($_GET['video'])){ $vID = $_GET['video']; }else{ $vID = 1; }
 
-		$video[1] = '1846726';
+		$video[1] = '62098345';
 		$project_name[1] = 'Polaris';
 		$project_description[1] = 'Product Launch';
 		$title_thumbnail[1] = 'Polaris';
 		$thumbnail[1] = 'polaris_orv_launch.png';
 
-		$video[2] = '1846726';
+		$video[2] = '62098343';
 		$project_name[2] = 'Porsche';
 		$project_description[2] = 'Autoshow';
 		$title_thumbnail[2] = 'Porsche';
 		$thumbnail[2] = 'porsche_autoshow.png';
 
-		$video[3] = '1846726';
+		$video[3] = '52634688';
 		$project_name[3] = 'Victory';
 		$project_description[3] = 'Brand Video';
 		$title_thumbnail[3] = 'Victory';
 		$thumbnail[3] = 'victory_brand.png';
            
-        $video[4] = '1846726';
+        $video[4] = '52634685';
 		$project_name[4] = 'Dell';
 		$project_description[4] = 'Customer Awards';
 		$title_thumbnail[4] = 'Dell';
 		$thumbnail[4] = 'dell_customer_awards.png';
 
-		$video[5] = '1846726';
+		$video[5] = '62098342';
 		$project_name[5] = 'Target';
 		$project_description[5] = 'Meeting Opener';
 		$title_thumbnail[5] = 'Target';
 		$thumbnail[5] = 'target_meeting_opener.png';
 
-        $video[6] = '1846726';
+        $video[6] = '51453301';
 		$project_name[6] = 'Mayo Clinic';
 		$project_description[6] = 'What If';
 		$title_thumbnail[6] = 'Mayo Clinic';
